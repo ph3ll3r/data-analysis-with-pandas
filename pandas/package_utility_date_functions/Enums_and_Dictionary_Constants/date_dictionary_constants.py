@@ -139,3 +139,78 @@ SHORTMONTH_DDYY = {'shortmonth_ddyy':
                     'DATE_FORMAT_NONE': '%b %d %y'
                 }
             }
+
+QUARTER_ANCHOR_MONTH = {
+                        'January' :
+                            {
+                                'description' :'January is always a calendar year quarters',
+                                'short_year'  : False,
+                                'determine_quarter_tuple':((1,2,3, "I"), (4,5,6, "II"), (7,8,9, "III"), (10,11,12, "IV"))
+                            },
+                        'February' :
+                            {
+                                'description' :'February is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((2,3, 4, "I"), (5,6, 7, "II"), (8,9,10, "III"), (11,12,1, "IV"))
+                            },
+                       'March' :
+                            {
+                                'description' :'March is always a fiscal year quarters',
+                                'short_year'  : False,
+                                'determine_quarter_tuple':((3,4, 5, "I"), (6,7, 8, "II"), (9,10,11, "III"), (12,1,2, "IV"))
+                            },
+                       'April' :
+                            {
+                                'description' :'April is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((4,5,6, "I"), (7,8,9, "II"), (10,11,12, "III"), (1,2,3, "IV"))
+                            },
+                       'May' :
+                            {
+                                'description' :'May is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((5,6,7, "I"), (8,9,10, "II"), (11,12,1, "III"), (2,3,4, "IV"))
+                            },
+                       'June' :
+                            {
+                                'description' :'June is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((6,7,8, "I"), (9,10,11, "II"), (12,1,2, "III"), (3,4,5, "IV"))
+                            },
+                       'July' :
+                            {
+                                'description' :'July is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((7,8,9, "I"), (10,11,12, "II"), (1,2,3, "III"), (4,5,6, "IV"))
+                            },
+                       'August' :
+                            {
+                                'description' :'August is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((8,9,10, "I"), (11,12,1, "II"), (2,3,4, "III"), (5,6, 7, "IV"))
+                            },
+                       'September' :
+                            {
+                                'description' :'September is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((9, 10,11, "I"), (12,1,2, "II"), (3,4,5, "III"), (6,7,8, "IV"))
+                            },
+                       'October' :
+                            {
+                                'description' :'October is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((10, 11,12, "I"), (1,2,3, "II"), (4,5,6, "III"), (7,8,9, "IV"))
+                            },
+                       'November' :
+                            {
+                                'description' :'November is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((11, 12,1, "I"), (2,3,4, "II"), (5,6,7, "III"), (8,9,10, "IV"))
+                            },
+                       'December' :
+                            {
+                                'description' :'December is always a fiscal year quarters',
+                                'short_year'  : False,
+                               'determine_quarter_tuple':((12,1,2, "I"), (3,4,5, "II"), (6,7,8, "III"), (9,10,11, "IV"))
+                            }
+                        }
