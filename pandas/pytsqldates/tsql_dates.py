@@ -1,11 +1,9 @@
- 
-    # EE
 from datetime import datetime
 from enum import Enum
 from types import MappingProxyType
 from dateutil.relativedelta import relativedelta
-from sqldates.enums_and_dictionary_constants.date_enum_constants import DateSeparator,StrpTime,QuarterAnchorMonth
-from sqldates.enums_and_dictionary_constants.date_dictionary_constants import YYYYMMDD, YYMMDD, MMDDYYYY, MMDDYY, MMYYYY, MMYY, MONTHNAME_DDYYYY, SHORTMONTH_DDYYYY, SHORTMONTH_DDYY, MONTHNAME_DDYY,DATE_SEPARATOR,QUARTER_ANCHOR_MONTH
+from .enums_and_dictionary_constants.date_enum_constants import DateSeparator,StrpTime,QuarterAnchorMonth
+from .enums_and_dictionary_constants.date_dictionary_constants import YYYYMMDD, YYMMDD, MMDDYYYY, MMDDYY, MMYYYY, MMYY, MONTHNAME_DDYYYY, SHORTMONTH_DDYYYY, SHORTMONTH_DDYY, MONTHNAME_DDYY,DATE_SEPARATOR,QUARTER_ANCHOR_MONTH
   
 class tsql_dates() :
     
@@ -13,7 +11,7 @@ class tsql_dates() :
     _all_date_formats = MappingProxyType(dict( \
                                                     **YYYYMMDD,**YYMMDD,**MMDDYYYY,**MMDDYY,**MMYYYY,**MMYY,  \
                                                     **MONTHNAME_DDYYYY,**SHORTMONTH_DDYYYY,**SHORTMONTH_DDYY, \
-                                                    **MONTHNAME_DDYY,QUARTER_ANCHOR_MONTH\
+                                                    **MONTHNAME_DDYY,QUARTER_ANCHOR_MONTH \
                                                 ))
 
     # _date_separation is a private dictionary variable which is made immutable by using the MappingProxyType
@@ -25,7 +23,6 @@ class tsql_dates() :
             self.year = None
     
     def parse_using_date_strptime_format(self,strp_time: StrpTime, date_separator: DateSeparator, orderdate:str) -> (int, int, int):
-        
         """
             Method Overview
             
@@ -114,8 +111,7 @@ def datediff(self,strp_time: StrpTime, date_separator: DateSeparator, date_part:
     
     1. Create an Instance of the Class:                   
         If parse_using_date_strptime_format is a regular method (not static or class method), 
-        you need to create an instance of TSQL_to_Python_Date_functions and then 
-        call the method on that instance.
+        you need to create an instance of tsql_dates and then call the method on that instance.
     or 
     Make the Method Static:
         If parse_using_date_strptime_format does not need to access any instance-specific data (i.e., it doesn't use self),
