@@ -136,7 +136,7 @@ def datediff(self,strp_time: StrpTime, date_separator: DateSeparator, date_part:
     parser = tsql_dates()
     self.month, self.day , self.year = parser.parse_using_date_strptime_format(strp_time, date_separator, orderdate)
     start_date = datetime(self.year,self.month, self.day)
-    self.month, self.day , self.year = parser.parse_using_date_strptime_format(strp_time, date_separator, orderdate)
+    self.month, self.day , self.year = parser.parse_using_date_strptime_format(strp_time, date_separator, deliverydate)
     end_date = datetime(self.year,self.month, self.day)
     
     # Calculating Date Difference: The function calculates the difference between 
